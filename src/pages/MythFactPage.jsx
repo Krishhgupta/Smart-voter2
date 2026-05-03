@@ -19,17 +19,17 @@ const MythFactPage = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-12">
-      <h1 className="text-3xl font-bold text-center text-slate-900 mb-10">{t('mythFact')}</h1>
+    <div className="max-w-3xl mx-auto px-6 py-12 transition-colors duration-300">
+      <h1 className="text-3xl font-bold text-center text-slate-900 dark:text-white mb-10 transition-colors duration-300">{t('mythFact')}</h1>
 
       <div className="space-y-4">
         {items.map((item, idx) => (
-          <div key={idx} className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+          <div key={idx} className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden transition-colors duration-300">
             <button 
               onClick={() => handleToggle(idx)}
-              className="w-full flex items-center justify-between p-5 text-left bg-slate-50 hover:bg-slate-100 transition-colors focus:outline-none"
+              className="w-full flex items-center justify-between p-5 text-left bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors focus:outline-none"
             >
-              <span className="font-bold text-red-600 flex items-center gap-2">
+              <span className="font-bold text-red-600 dark:text-red-400 flex items-center gap-2 transition-colors duration-300">
                 <span className="w-2 h-2 bg-red-500 rounded-full"></span>
                 {t('mythLabel')}: {t(item.mythKey)}
               </span>
@@ -45,12 +45,12 @@ const MythFactPage = () => {
                   exit={{ height: 0, opacity: 0 }}
                   className="overflow-hidden"
                 >
-                  <div className="p-5 border-t border-slate-100 bg-white">
-                    <span className="font-bold text-primary-600 flex items-center gap-2 mb-2">
+                  <div className="p-5 border-t border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-800 transition-colors duration-300">
+                    <span className="font-bold text-primary-600 dark:text-primary-400 flex items-center gap-2 mb-2 transition-colors duration-300">
                       <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
                       {t('factLabel')}:
                     </span>
-                    <p className="text-slate-700 leading-relaxed pl-4 border-l-2 border-primary-200">
+                    <p className="text-slate-700 dark:text-slate-300 leading-relaxed pl-4 border-l-2 border-primary-200 dark:border-primary-800 transition-colors duration-300">
                       {t(item.factKey)}
                     </p>
                   </div>

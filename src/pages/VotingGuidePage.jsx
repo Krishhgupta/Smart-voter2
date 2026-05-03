@@ -28,8 +28,8 @@ const VotingGuidePage = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
-      <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">{t('guide')}</h1>
+    <div className="max-w-4xl mx-auto px-6 py-12 transition-colors duration-300">
+      <h1 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8 text-center">{t('guide')}</h1>
       
       <motion.div 
         variants={container}
@@ -41,15 +41,15 @@ const VotingGuidePage = () => {
           <motion.div 
             key={index} 
             variants={item}
-            className="flex flex-col sm:flex-row items-start sm:items-center p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow gap-6"
+            className="flex flex-col sm:flex-row items-start sm:items-center p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-all gap-6"
           >
-            <div className="flex-shrink-0 w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-xl relative">
+            <div className="flex-shrink-0 w-16 h-16 bg-primary-100 dark:bg-slate-700 rounded-full flex items-center justify-center text-primary-600 dark:text-primary-400 font-bold text-xl relative">
               <step.icon className="w-8 h-8 opacity-20 absolute" />
               <span className="relative z-10">{index + 1}</span>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-slate-800 mb-2">{step.title}</h3>
-              <p className="text-slate-600 text-lg leading-relaxed">{step.desc}</p>
+              <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">{step.title}</h3>
+              <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">{step.desc}</p>
             </div>
           </motion.div>
         ))}
